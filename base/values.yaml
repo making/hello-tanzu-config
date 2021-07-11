@@ -7,6 +7,8 @@ external_url: https://hello-tanzu.example.com
 create_issuer: True
 issuer_name: hello-tanzu-ca-issuer
 cluster_issuer_name:
+registry_username:
+registry_password:
 ca_crt: |
   -----BEGIN CERTIFICATE-----
   MIIDPzCCAiegAwIBAgIUJMc8g8UAEMP2ND2RQuY6QRDmWHIwDQYJKoZIhvcNAQEL

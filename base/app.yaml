@@ -24,6 +24,8 @@ spec:
       containers:
       - image: #@ data.values.app_image
         name: hello-tanzu
+      imagePullSecrets:
+      - name: registry-secret
 ---
 apiVersion: v1
 kind: Service
