@@ -1,0 +1,20 @@
+#@ load("@ytt:data", "data")
+#@ if data.values.create_issuer:
+apiVersion: v1
+kind: Secret
+metadata:
+  name: hello-tanzu-ca-key-pair
+  namespace: #@ data.values.namespace
+stringData:
+  tls.crt: #@ data.values.ca_crt
+  tls.key: #@ data.values.ca_key
+---
+apiVersion: cert-manager.io/v1beta1
+kind: Issuer
+metadata:
+  name: #@ data.values.issuer_name
+  namespace: #@ data.values.namespace
+spec:
+  ca:
+    secretName: hello-tanzu-ca-key-pair
+#@ end
