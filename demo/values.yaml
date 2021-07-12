@@ -1,5 +1,0 @@
-#@data/values
-#@overlay/match-child-defaults missing_ok=True
----
-app_image: harbor-10-96-11-126.sslip.io/demo/hello-tanzu@sha256:60e69fe4048411e2386d07f31133cce33cdc154a38bf8b1a6b43c238b820cb2c
-external_url: https://hello-tanzu-127-0-0-1.sslip.io
